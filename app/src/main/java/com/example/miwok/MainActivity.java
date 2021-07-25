@@ -14,7 +14,11 @@
  * limitations under the License.
  */
 package com.example.miwok;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,5 +29,37 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
+
+        TextView numberTextView = findViewById(R.id.numbers);
+        numberTextView.setOnClickListener(v -> {
+            Intent i= new Intent(MainActivity.this,NumberActivity.class);
+            startActivity(i);
+        });
+
+
+        TextView familyTextView = findViewById(R.id.family);
+        familyTextView.setOnClickListener(v -> {
+            Intent i= new Intent(MainActivity.this,FamilyMembersActivity.class);
+            startActivity(i);
+
+        });
+
+        TextView colorTextView = findViewById(R.id.colors);
+        colorTextView.setOnClickListener(v -> {
+            Intent i= new Intent(MainActivity.this,ColorsActivity.class);
+            startActivity(i);
+
+        });
+
+        TextView phrasesTextView = findViewById(R.id.phrases);
+        phrasesTextView.setOnClickListener(v -> {
+            Intent i= new Intent(MainActivity.this,PhrasesActivity.class);
+            startActivity(i);
+
+        });
     }
-}
+
+  }
+
+
+
