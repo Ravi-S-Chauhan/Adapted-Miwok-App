@@ -3,24 +3,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    >
+    android:orientation="horizontal"
+>
 
-    <TextView
+
+    <ImageView
+        android:layout_width="@dimen/list_item_height"
+        android:layout_height="@dimen/list_item_height"
+        android:id="@+id/img_view"
+        android:background="@color/tan_background"/>
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="@string/lutti"
-        android:id="@+id/miwok_text_view"
+        android:layout_height="@dimen/list_item_height"
+        style="@style/CategoryStyle"
+        android:background="@color/category_numbers"
+        android:id="@+id/text_container"
+        >
 
-        />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="@string/one"
-        android:id="@+id/default_text_view"
-        />
+        <TextView
+            android:id="@+id/miwok_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/lutti"
+            android:textSize="@dimen/text_view_size"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="bottom"
+            />
 
+        <TextView
+            android:id="@+id/default_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/one"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_view_size"
+            android:gravity="top"
+            android:layout_below="@id/miwok_text_view"
+
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/outline_play_arrow_black_24"
+            android:padding="16dp"
+            />
+
+    </RelativeLayout>
 
 </LinearLayout>
+
